@@ -102,5 +102,37 @@ export const inventory = [
       "thumbnail": "https://68.media.tumblr.com/avatar_539a57dcf56a_128.png"
     },
     "nat": "TR"
+  },
+  {
+    "title": "Lamb",
+    "location": {
+      "street": "3875 fatih sultan mehmet cd",
+      "city": "elazığ",
+      "state": "erzincan",
+      "postcode": 44000
+    },
+    "location2": "Heidi's Yard",
+    "login": {
+      "username": "goldenduck344",
+      "password": "dogwood",
+      "salt": "s3YLIy3o",
+      "md5": "0475fbb9357434458f8b5990b6d8bf38",
+      "sha1": "1d1d086f2b255eec0fb905ec171d2552ed5352c6",
+      "sha256": "472543aba428f162187dae5cf4d8e851410e7b6a5ee66511c277c3266db87684"
+    },
+    "dob": "1980-05-31 10:31:12",
+    "registered": "2013-06-10 12:48:40",
+    "phone": "(483)-824-9134",
+    "cell": "(255)-294-7516",
+    "id": {
+      "name": "",
+      "value": null
+    },
+    "picture": {
+      "large": "https://pbs.twimg.com/profile_images/631882001868541953/JDI7LcGG_400x400.jpg",
+      "medium": "https://pbs.twimg.com/profile_images/631882001868541953/JDI7LcGG_400x400.jpg",
+      "thumbnail": "https://pbs.twimg.com/profile_images/631882001868541953/JDI7LcGG_400x400.jpg"
+    },
+    "nat": "TR"
   }
 ];

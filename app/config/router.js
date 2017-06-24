@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
-import { Icon } from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
 
 import Feed from '../screens/Feed';
 import Settings from '../screens/Settings';
@@ -11,7 +11,14 @@ export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: 'Feed',
+      title: 'Inventory',
+      headerRight:
+        <Button
+          icon={{name: 'add'}}
+          backgroundColor="#f00"
+          buttonStyle={{paddingRight: 0}}
+        />
+      ,
     },
   },
   Details: {
@@ -26,7 +33,7 @@ export const Tabs = TabNavigator({
   Feed: {
     screen: FeedStack,
     navigationOptions: {
-      tabBarLabel: 'Feed',
+      tabBarLabel: 'Inventory',
       tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
     },
   },
