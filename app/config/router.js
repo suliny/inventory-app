@@ -4,7 +4,7 @@ import { Icon } from 'react-native-elements';
 
 import Feed from '../screens/Feed';
 import Settings from '../screens/Settings';
-import UserDetail from '../screens/UserDetail';
+import InventoryDetail from '../screens/InventoryDetail';
 import Me from '../screens/Me';
 
 export const FeedStack = StackNavigator({
@@ -15,9 +15,9 @@ export const FeedStack = StackNavigator({
     },
   },
   Details: {
-    screen: UserDetail,
+    screen: InventoryDetail,
     navigationOptions: ({ navigation }) => ({
-      title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`,
+      title: `${navigation.state.params.title}`,
     }),
   },
 });

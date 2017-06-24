@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { Tile, List, ListItem } from 'react-native-elements';
 
-class UserDetail extends Component {
+class InventoryDetail extends Component {
   render() {
-    const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params;
+    const { picture, title, email, phone, login, dob, location } = this.props.navigation.state.params;
 
     return (
       <ScrollView>
         <Tile
           imageSrc={{ uri: picture.large}}
           featured
-          title={`${name.first.toUpperCase()} ${name.last.toUpperCase()}`}
+          title={`${title}`}
           caption={email}
         />
 
@@ -53,4 +53,4 @@ class UserDetail extends Component {
   }
 }
 
-export default UserDetail;
+export default InventoryDetail;
