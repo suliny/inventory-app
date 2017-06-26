@@ -46,6 +46,7 @@ export const inventory = [
       "state": "nunavut",
       "postcode": 58699
     },
+    "lastUpdated": "05/05/17",
     "location2": "Half Moon Bay",
     "login": {
       "username": "smallmouse862",
@@ -80,6 +81,7 @@ export const inventory = [
       "postcode": 44000
     },
     "location2": "Redwood Forests",
+    "lastUpdated": "05/05/17",
     "login": {
       "username": "goldenduck344",
       "password": "dogwood",
@@ -112,6 +114,7 @@ export const inventory = [
       "postcode": 44000
     },
     "location2": "Heidi's Yard",
+    "lastUpdated": "05/05/17",
     "login": {
       "username": "goldenduck344",
       "password": "dogwood",

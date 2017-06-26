@@ -1,56 +1,83 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, StyleSheet, Image, View } from 'react-native';
 import { Tile, List, ListItem } from 'react-native-elements';
 
 class InventoryDetail extends Component {
   render() {
-    const { picture, title, email, phone, login, dob, location } = this.props.navigation.state.params;
+    const { picture, title, email, phone, login, dob, location, location2, lastUpdated } = this.props.navigation.state.params;
 
     return (
       <ScrollView>
         <Tile
           imageSrc={{ uri: picture.large}}
           featured
-          title={`${title}`}
-          caption={email}
+        // don't need title showing on image
+        //  title={`${title}`}
+        //    caption={email}
         />
 
         <List>
           <ListItem
-            title="Email"
-            rightTitle={email}
+            titleStyle = {styles.bigTitle}
+            title={`${title}`}
+            titleContainerStyle = {styles.titleContainer}
             hideChevron
           />
+        </List>
+        <List>
           <ListItem
-            title="Phone"
-            rightTitle={phone}
+            title="Location:"
+            rightTitle={location2}
+            rightTitleStyle={styles.listText}
             hideChevron
           />
         </List>
 
         <List>
           <ListItem
-            title="Username"
-            rightTitle={login.username}
+            title="Last Updated:"
+            rightTitle={lastUpdated}
+            rightTitleStyle={styles.listText}
             hideChevron
           />
         </List>
 
         <List>
           <ListItem
-            title="Birthday"
-            rightTitle={dob}
-            hideChevron
-          />
-          <ListItem
-            title="City"
-            rightTitle={location.city}
+            title="Map Location:"
             hideChevron
           />
         </List>
+        <Tile
+          imageSrc={{ uri: 'https://image.ibb.co/d0Mnhk/Screenshot_2017_06_25_21_27_49.png'}}
+          featured
+        />
+        <View>
+        <Image
+          source={{uri: 'https://ibb.co/caTB8Q'}}
+        />
+        </View>
       </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  bigTitle: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 30,
+    alignSelf: 'center',
+  },
+  titleContainer: {
+    backgroundColor: 'transparent',
+  },
+  listText: {
+    color: 'gray',
+  },
+  red: {
+    color: 'red',
+  },
+});
 
 export default InventoryDetail;
