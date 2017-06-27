@@ -48,6 +48,7 @@ export const inventory = [
     },
     "lastUpdated": "05/05/17",
     "location2": "Half Moon Bay",
+    "mapScreenshot": "https://image.ibb.co/d0Mnhk/Screenshot_2017_06_25_21_27_49.png",
     "login": {
       "username": "smallmouse862",
       "password": "christin",

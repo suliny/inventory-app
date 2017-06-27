@@ -4,7 +4,7 @@ import { Tile, List, ListItem } from 'react-native-elements';
 
 class InventoryDetail extends Component {
   render() {
-    const { picture, title, email, phone, login, dob, location, location2, lastUpdated } = this.props.navigation.state.params;
+    const { picture, title, email, phone, login, dob, location, location2, lastUpdated, mapScreenshot } = this.props.navigation.state.params;
 
     return (
       <ScrollView>
@@ -49,7 +49,7 @@ class InventoryDetail extends Component {
           />
         </List>
         <Tile
-          imageSrc={{ uri: 'https://image.ibb.co/d0Mnhk/Screenshot_2017_06_25_21_27_49.png'}}
+          imageSrc={{ uri: mapScreenshot}}
           featured
         />
         <View>
