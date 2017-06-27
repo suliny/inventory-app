@@ -14,7 +14,11 @@ class Feed extends Component {
     return {
       title: 'Inventory',
       headerRight: (
-        <Button icon={{name: 'add'}} onPress={() => params.handleSave()} />
+        <Button
+          buttonStyle={{paddingRight: 3, backgroundColor: '#ccc'}}
+          icon={{name: 'add'}}
+          onPress={() => params.handleSave()}
+        />
       )
     };
   };
