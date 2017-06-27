@@ -1,25 +1,15 @@
 import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
-import { Icon, Button } from 'react-native-elements';
+import { Icon } from 'react-native-elements';
 
 import Feed from '../screens/Feed';
-import Settings from '../screens/Settings';
+import AddItem from '../screens/AddItem';
 import InventoryDetail from '../screens/InventoryDetail';
 import Me from '../screens/Me';
 
 export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
-    navigationOptions: {
-      title: 'Inventory',
-      headerRight:
-        <Button
-          icon={{name: 'add'}}
-          backgroundColor="#f00"
-          buttonStyle={{paddingRight: 0}}
-        />
-      ,
-    },
   },
   Details: {
     screen: InventoryDetail,
@@ -27,6 +17,12 @@ export const FeedStack = StackNavigator({
       title: `${navigation.state.params.title}`,
     }),
   },
+});
+
+export const MeStack = StackNavigator({
+  Me: {
+    screen: Me,
+  }
 });
 
 export const Tabs = TabNavigator({
@@ -38,7 +34,7 @@ export const Tabs = TabNavigator({
     },
   },
   Me: {
-    screen: Me,
+    screen: MeStack,
     navigationOptions: {
       tabBarLabel: 'Me',
       tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
@@ -46,11 +42,11 @@ export const Tabs = TabNavigator({
   },
 });
 
-export const SettingsStack = StackNavigator({
-  Settings: {
-    screen: Settings,
+export const AddItemStack = StackNavigator({
+  AddItem: {
+    screen: AddItem,
     navigationOptions: {
-      title: 'Settings',
+      title: 'Add Item',
     },
   },
 });
@@ -59,8 +55,8 @@ export const Root = StackNavigator({
   Tabs: {
     screen: Tabs,
   },
-  Settings: {
-    screen: SettingsStack,
+  AddItem: {
+    screen: AddItemStack,
   },
 }, {
   mode: 'modal',
