@@ -7,8 +7,8 @@ import {
 import { List, ListItem, Button, Icon } from 'react-native-elements';
 import { inventory } from '../config/data';
 
-class Feed extends Component {
-
+// https://github.com/react-community/react-navigation/issues/145
+class Inventory extends Component {
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state;
     return {
@@ -17,28 +17,28 @@ class Feed extends Component {
         <Button
           buttonStyle={{paddingRight: 3, backgroundColor: '#ccc'}}
           icon={{name: 'add'}}
-          onPress={() => params.handleSave()}
+          onPress={() => params.handleAddItem()}
         />
       )
     };
   };
 
-  constructor(props) {
-    super(props);
-    this.handleAddItemPress = this.handleAddItemPress.bind(this);
-  }
-
+  // Only needed because we want to use line 38 where the "this" context is
+  // not available otherwise
   componentDidMount() {
-    this.props.navigation.setParams({ handleSave: this.handleAddItemPress });
+    this.props.navigation.setParams({ handleAddItem: this.handleAddItemPress });
   }
 
+  // Top right header click
+  handleAddItemPress = () => {
+    this.props.navigation.navigate('AddItem');
+  }
+
+  // Individual row item click
   handleSeeMoreDetails = (item) => {
     this.props.navigation.navigate('Details', { ...item });
   };
 
-  handleAddItemPress = () => {
-    this.props.navigation.navigate('AddItem');
-  }
 
   render() {
     let items = inventory
@@ -61,4 +61,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default Inventory;

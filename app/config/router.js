@@ -2,14 +2,14 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Feed from '../screens/Feed';
+import Inventory from '../screens/Inventory';
 import AddItem from '../screens/AddItem';
 import InventoryDetail from '../screens/InventoryDetail';
 import Me from '../screens/Me';
 
-export const FeedStack = StackNavigator({
-  Feed: {
-    screen: Feed,
+export const InventoryStack = StackNavigator({
+  Inventory: {
+    screen: Inventory,
   },
   Details: {
     screen: InventoryDetail,
@@ -26,8 +26,8 @@ export const MeStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
-  Feed: {
-    screen: FeedStack,
+  Inventory: {
+    screen: InventoryStack,
     navigationOptions: {
       tabBarLabel: 'Inventory',
       tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
