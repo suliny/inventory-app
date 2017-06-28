@@ -20,8 +20,7 @@ export const me = {
     "sha1": "4f28fcd2d5e5ae5e0ff55b7528841e350cabf9fb",
     "sha256": "1d44ef3ad01dafe929c56021498d8a6d89b2c438bd3f6a07de777ed35b98b5e1"
   },
-  "dob": "1992-09-22 07:28:16",
-  "registered": "2010-08-09 13:37:38",
+  "dob": "1992-09-22",
   "phone": "(589)-070-0928",
   "cell": "(110)-065-6280",
   "id": {
@@ -40,12 +39,6 @@ export const inventory = [
   {
     "gender": "male",
     "title": "Sea Otter",
-    "location": {
-      "street": "3649 dieppe ave",
-      "city": "maitland",
-      "state": "nunavut",
-      "postcode": 58699
-    },
     "lastUpdated": "05/05/17",
     "location2": "Half Moon Bay",
     "mapScreenshot": "https://image.ibb.co/d0Mnhk/Screenshot_2017_06_25_21_27_49.png",
@@ -75,12 +68,6 @@ export const inventory = [
   {
     "gender": "male",
     "title": "Bunny",
-    "location": {
-      "street": "3875 fatih sultan mehmet cd",
-      "city": "elazığ",
-      "state": "erzincan",
-      "postcode": 44000
-    },
     "location2": "Redwood Forests",
     "lastUpdated": "05/05/17",
     "login": {
@@ -108,12 +95,6 @@ export const inventory = [
   },
   {
     "title": "Lamb",
-    "location": {
-      "street": "3875 fatih sultan mehmet cd",
-      "city": "elazığ",
-      "state": "erzincan",
-      "postcode": 44000
-    },
     "location2": "Heidi's Yard",
     "lastUpdated": "05/05/17",
     "login": {
